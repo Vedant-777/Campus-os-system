@@ -5,9 +5,9 @@ const ThemeContext = createContext()
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
     try {
-      return localStorage.getItem('scos-theme') || 'dark'
+      return localStorage.getItem('scos-theme') || 'light'
     } catch {
-      return 'dark'
+      return 'light'
     }
   })
 
